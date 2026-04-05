@@ -29,6 +29,7 @@ export default function Notes({ tag }: PropsViewFilter) {
     const [inputValue, setInputValue] = useState('');
       const debouncedSearch = useDebouncedCallback((value: string) => {
       setSearch(value);
+      setPage(1)
       }, 300);
       const [isModalOpen, setIsModalOpen] = useState(false);
     return (
