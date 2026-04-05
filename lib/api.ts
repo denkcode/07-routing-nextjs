@@ -10,7 +10,8 @@ export interface FetchNotesResponse {
 
 export const fetchNotes = async (
     page: number,
-    search: string
+    search: string,
+    tag?: string
 ): Promise<{ notes: Note[]; totalPages: number }> => {
     const response = await axios.get<FetchNotesResponse>(
         `${BASE_URL}/notes`,
@@ -18,6 +19,7 @@ export const fetchNotes = async (
             params: {
                 search,
                 page,
+                ...(tag ? { tag } : {}),
                 perPage: 12,
             },
 
