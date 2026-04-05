@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const ModalNote = ({ children }: Props) => {
+const NotePreview = ({ children }: Props) => {
   const router = useRouter();
   
   const close = () => router.back();
@@ -18,4 +18,4 @@ const ModalNote = ({ children }: Props) => {
   );
 };
 
-export default ModalNote;
+export default NotePreview;

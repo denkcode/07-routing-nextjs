@@ -1,6 +1,6 @@
 import { QueryClient, HydrationBoundary, dehydrate } from "@tanstack/react-query"
 import { fetchNotes } from "@/lib/api"
-import FilterView from "./FilterView.client"
+import FilterView from "./Notes.client"
 
 interface NotesFiltersProps {
   params: Promise<{ slug: string[] }>;

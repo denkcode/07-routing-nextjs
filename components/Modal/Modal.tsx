@@ -2,7 +2,7 @@
 import { useEffect } from 'react'
 import css from './Modal.module.css'
 import { createPortal } from 'react-dom'
-import { useRouter } from 'next/navigation'
+
 
 export default function Modal({ onClose, children }: { onClose: () => void, children: React.ReactNode }) {
   useEffect(() => {
